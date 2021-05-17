@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://adeoluwa1:adeoluwa1@nuxtdashboard.kkyuj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
