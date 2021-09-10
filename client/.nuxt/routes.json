@@ -3,70 +3,36 @@
     "name": "addblog",
     "path": "/addblog",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\addblog\\\\index.vue",
-    "chunkName": "pages/addblog/index",
-    "_name": "_1a1c5384"
+    "chunkName": "pages/addblog/index"
   },
   {
     "name": "blog",
     "path": "/blog",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_e7d09b1e"
-  },
-  {
-    "name": "category",
-    "path": "/category",
-    "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\category\\\\index.vue",
-    "chunkName": "pages/category/index",
-    "_name": "_360e1715"
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\dashboard\\\\index.vue",
-    "chunkName": "pages/dashboard/index",
-    "_name": "_61813d0d"
-  },
-  {
-    "name": "drafts",
-    "path": "/drafts",
-    "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\drafts\\\\index.vue",
-    "chunkName": "pages/drafts/index",
-    "_name": "_1c687ee1"
+    "chunkName": "pages/dashboard/index"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_10139c50"
-  },
-  {
-    "name": "users",
-    "path": "/users",
-    "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\users\\\\index.vue",
-    "chunkName": "pages/users/index",
-    "_name": "_900c46ce"
+    "chunkName": "pages/register/index"
   },
   {
     "name": "blog-id",
     "path": "/blog/:id",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\blog\\\\_id.vue",
-    "chunkName": "pages/blog/_id",
-    "_name": "_5e219d19"
-  },
-  {
-    "name": "drafts-id",
-    "path": "/drafts/:id",
-    "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\drafts\\\\_id.vue",
-    "chunkName": "pages/drafts/_id",
-    "_name": "_efca74ee"
+    "chunkName": "pages/blog/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\SEYI\\\\Documents\\\\Tailwind-css-and-Nuxtjs-Dashboard-master\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_41277993"
+    "chunkName": "pages/index"
   }
 ]

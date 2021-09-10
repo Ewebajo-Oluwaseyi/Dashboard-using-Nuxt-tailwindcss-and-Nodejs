@@ -1,9 +1,10 @@
 <template>
-  <section class="w-full w-1/2 px-6 mb-4">
+  <div>
+    <section class="w-full pt-10 w-1/2 px-6">
     <div v-if="loading">
       <loader/>
     </div>
-    <div class="bg-white mt-4" v-else>
+    <div class="bg-white" v-else>
       <table class="table-auto w-full boarder-collapse">
         <thead class="bg-gray-300">
           <tr>
@@ -37,7 +38,8 @@
                 View
               </router-link>
               <button
-                class="modal-open bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-2 rounded"
+                @click="toggleModal(blog)"
+                class="modal-open px-2 py-2 bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-2 rounded"
               >
                 Edit
               </button>
@@ -46,16 +48,20 @@
         </tbody>
       </table>
     </div>
+    <editblog :editableblog="editableblog" />
   </section>
+  </div>
 </template>
 
 <script>
 import loader from '@/components/loader/loader'
 import moment from 'moment'
+import editblog from './editblogpost'
 import swal from 'sweetalert'
 export default {
   components: {
-    loader
+    loader,
+    editblog
   },
   filters: {
     moment: function(date) {
@@ -65,7 +71,8 @@ export default {
    data() {
     return {
       loading: false,
-      blogs: []
+      blogs: [],
+      editableblog: {}
     }
   },
   methods: {
@@ -75,7 +82,6 @@ export default {
         let res = await this.$axios.get('/api/blog');
         this.blogs = res.data
         this.loading = false
-        console.log(this.blogs)
       } catch (err) {
         this.loading = false
         console.log(err)
@@ -84,7 +90,15 @@ export default {
     deleteBlog(id) {
       this.$axios.delete(`/api/blog/${id}`)
       this.getBlog()
-    }
+    },
+    toggleModal(blog) {
+    this.editableblog = blog
+    const body = document.querySelector('body');
+    const modal = document.querySelector('.modal');
+    modal.classList.toggle('opacity-0');
+    modal.classList.toggle('pointer-events-none');
+    body.classList.toggle('modal-active')
+  }
   },
   created() {
     this.getBlog()

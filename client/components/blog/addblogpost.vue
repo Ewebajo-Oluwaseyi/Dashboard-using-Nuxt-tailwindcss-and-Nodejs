@@ -26,8 +26,9 @@
             class="appearance-none block w-full bg-grey-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="post-blog-image"
             type="file"
+            accept="image/*"
             ref="file"
-            @change="handleFileUpload()"
+            @change="handleFileUpload"
             placeholder=""
           />
         </div>
@@ -121,9 +122,10 @@ export default {
     }
   },
   methods: {
-    handleFileUpload() {
-      this.data.image = this.$ref.file.files[0]
-      console.log(this.data.featured_image)
+    handleFileUpload(event) {
+      const file = event.target.files[0];
+      this.data.image = file
+      console.log(this.data.image)
     },
     async addNewBlog() {
       let config = {
@@ -136,8 +138,12 @@ export default {
         let category = this.data.category
         let tags = this.data.tags
         let content = this.data.content
-        let response = await this.$axios.post('/api/blog', {title, tags, category, content}, config)
-        console.log(response)
+        let image = this.data.image
+        let response = await this.$axios.post('/api/blog', {title, tags, category, content}, config);
+        const files = new FormData()
+        files.append('image', image, image.name)
+        let res = await this.$axios.post('/api/upload', files, config);
+        console.log(res)
         swal('Success', 'Blog Posted', 'sucess')
 
         this.data = {}

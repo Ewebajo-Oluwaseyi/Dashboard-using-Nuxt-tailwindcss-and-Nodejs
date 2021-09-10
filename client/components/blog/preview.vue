@@ -1,5 +1,6 @@
 <template>
-  <section class="w-full w-1/2 px-6 mb-4">
+  <div>
+    <section class="w-full pt-5 w-1/2 px-6 mb-4">
     <div v-if="loading">
       <loader/>
     </div>
@@ -26,6 +27,7 @@
         </div>
     </div>
   </section>
+  </div>
 </template>
 
 <script>

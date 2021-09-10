@@ -1,9 +1,13 @@
 <template>
   <header class="fixed color z-50 h-16 w-full shadow flex items-center justify-between">
       <div class="flex items-center h-full">
-            <div class="flex items-center text-center h-full w-48 border-r bg-midnightblue-500 border-grey-dark">
-               <span class="w-full text-dark text-xs xl:text-sm uppercase font-extrabold">Dashboard</span>
+            <div>
+              <nuxt-link to="/dashboard" class="flex items-center text-center h-full w-48 border-r bg-midnightblue-500 border-grey-dark">
+                <span class="w-full text-dark text-xs xl:text-sm uppercase font-extrabold">My Blog</span>
+              </nuxt-link>
             </div>
+
+
             <div class="flex items-center w-64">
                 <form action class="w-full h-full px-3 flex items-center">
                      <svg

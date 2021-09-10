@@ -45,4 +45,24 @@ router.delete('/:id',  (req, res) =>{
     }
 });
 
+router.put('/:id', async (req, res) => {
+    const blogId = req.params.id;
+    const blog = await Blog.findOne({_id: blogId})
+    if(blog) {
+        blog.title = req.body.title;
+        blog.tags = req.body.tags;
+        blog.category = req.body.category;
+        blog.image = req.body.image;
+        blog.content = req.body.content;
+
+        const updatedBlog = await blog.save()
+
+        res.send(updatedBlog);
+
+
+    }
+
+});
+
+
 module.exports = router;
